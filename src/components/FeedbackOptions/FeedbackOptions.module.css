@@ -1,0 +1,7 @@
+.buttonList {
+display: flex;
+gap: 20px;
+list-style: none;
+padding: 0;
+justify-content: center;
+}
