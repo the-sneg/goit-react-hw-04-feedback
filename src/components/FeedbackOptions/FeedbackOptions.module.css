@@ -5,3 +5,16 @@ list-style: none;
 padding: 0;
 justify-content: center;
 }
+
+.buttonGood:hover {
+background-color: rgb(9, 207, 9);
+        
+}
+.buttonNeutral:hover {
+    background-color: rgb(247, 231, 7);
+
+}
+.buttonBad:hover {
+    background-color: rgb(235, 55, 10);
+
+}

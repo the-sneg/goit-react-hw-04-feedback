@@ -7,7 +7,7 @@ export const FeedbackOptions = ({ onClick }) => {
         <button
           type="button"
           name="good"
-          className={s.button}
+          className={s.buttonGood}
           onClick={onClick}
         >
           Good
@@ -17,14 +17,19 @@ export const FeedbackOptions = ({ onClick }) => {
         <button
           type="button"
           name="neutral"
-          className={s.button}
+          className={s.buttonNeutral}
           onClick={onClick}
         >
           Neutral
         </button>
       </li>
       <li className={s.item}>
-        <button type="button" name="bad" className={s.button} onClick={onClick}>
+        <button
+          type="button"
+          name="bad"
+          className={s.buttonBad}
+          onClick={onClick}
+        >
           Bad
         </button>
       </li>
