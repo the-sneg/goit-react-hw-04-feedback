@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StatisicItem = styled.button`
+export const ButtonHover = styled.button`
   border-radius: 15px;
   border: 1px solid #49e1be;
   width: 70px;
@@ -9,14 +9,16 @@ export const StatisicItem = styled.button`
   text-align: center;
   &:hover {
     transform: scale(1.3);
-    background-color: ${props => {
-      switch (props.name) {
+    background-color: ${state => {
+      switch (state.name) {
         case 'good':
           return '#6df16d';
         case 'neutral':
           return '#f1ea02';
         case 'bad':
           return '#ff4141';
+        default:
+          return 'black';
       }
     }};
   }

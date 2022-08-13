@@ -1,17 +1,17 @@
 import s from './FeedbackOptions.module.css';
-import { StatisicItem } from './Statistic.styled';
+import { ButtonHover } from './FeedbackOptions.styled';
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div className={s.buttonList}>
       {options.map(name => {
         return (
-          <StatisicItem
+          <ButtonHover
             key={name}
             name={name}
             onClick={() => onLeaveFeedback(name)}
           >
             {name}
-          </StatisicItem>
+          </ButtonHover>
         );
       })}
     </div>
