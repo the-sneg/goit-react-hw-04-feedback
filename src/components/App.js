@@ -13,14 +13,10 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleClick = e => {
-    const { name } = e.target;
-
-    this.setState(prevState => {
-      return {
-        [name]: prevState[name] + 1,
-      };
-    });
+  handleClick = name => {
+    this.setState(state => ({
+      [name]: state[name] + 1,
+    }));
   };
 
   countTotalFeedback = () => {
@@ -39,13 +35,16 @@ export class App extends Component {
   render() {
     return (
       <div className={s.wrap}>
-        <Section title={'Please leave feedback'}>
-          <FeedbackOptions onClick={this.handleClick} />
+        <Section title="Please leave feedback">
+          <FeedbackOptions
+            options={Object.keys(this.state)}
+            onLeaveFeedback={this.handleClick}
+          />
         </Section>
 
-        <Section title={'Statistics'}>
+        <Section title="Statistics">
           {this.countTotalFeedback() === 0 ? (
-            <Notification message={'There is no feedback'} />
+            <Notification message="There is no feedback" />
           ) : (
             <Statistics
               good={this.state.good}
