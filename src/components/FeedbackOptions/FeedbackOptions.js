@@ -5,11 +5,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     <div className={s.buttonList}>
       {options.map(name => {
         return (
-          <ButtonHover
-            key={name}
-            name={name}
-            onClick={() => onLeaveFeedback(name)}
-          >
+          <ButtonHover key={name} name={name} onClick={onLeaveFeedback}>
             {name}
           </ButtonHover>
         );
